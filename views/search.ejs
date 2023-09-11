@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs') %>
+        <link rel="stylesheet" type="text/css" href="/styles/search.css">
+        <title>
+            <%=query%>
+        </title>
+</head>
+
+<body>
+
+    <%if(title.length==0){%>
+        <div class="unmatched">
+            <p>Your Search <strong>
+                    <%=query%>
+                </strong> did not match any documents.</p>
+            <p>Suggestions:</p>
+            <ul>
+                <li>Make sure that all words are spelled correctly.</li>
+                <li>Try different keywords.</li>
+                <li>Try more general keywords.</li>
+                <li>Try fewer keywords.</li>
+            </ul>
+        </div>
+
+
+        <%}%>
+
+            <%for(let i=0;i<title.length; i++){%>
+                <a class="link" target="_blank" href="./PS/<%=url[i]%>">
+                    <%=title[i]%>
+                </a>
+                <p class="body">
+                    <%=st[i]%>.......
+                </p>
+                <br>
+                <%}%>
+
+                    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

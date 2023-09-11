@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs') %>
+        <link rel="stylesheet" type="text/css" href="/styles/description.css">
+        <title>
+            <%=title%>
+        </title>
+</head>
+
+<body>
+
+    <h1 class="title">
+        <%=title%>
+    </h1>
+    <br>
+    <div class="align-centre">
+        <a class="link" target="_blank" href=<%=url%> >Link to the Problem</a>
+        <br>
+        <a class="link" href="https://ideone.com/" target="_blank">Link to IDE</a>
+    </div>
+    <br>
+    <% for(let i=0; i<data.length; i++){%>
+        <p class="problem-description">
+            <%=data[i]%>
+        </p>
+        <%}%>
+
+            <%- include('./partials/footer.ejs') %>
+
+
+</body>
+
+</html>

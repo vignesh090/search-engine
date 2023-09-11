@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/header.ejs') %>
+    <link rel="stylesheet" type="text/css" href="/styles/index.css" />
+    <title>Search-Engine</title>
+</head>
+
+<body>
+  <div class="container">
+    <form class="search-form" method="get" action="/search">
+      <input type="text" name="query" value="" placeholder="Search Algo/DS Problems" spellcheck="true"
+        autocomplete="off" id="query" />
+      <button type="submit" value="SUBMIT">
+        <img src="/images/search.png" />
+      </button>
+    </form>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
