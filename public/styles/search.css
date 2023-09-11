@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@keyframes animatedBackground {
+    from {
+        background-position: 0 100%;
+    }
+    to {
+        background-position: 100% 0%;
+    }
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: whitesmoke;
+    background-image: url("/images/search_background.jpg");
+    animation: animatedBackground 10s linear infinite;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    padding: 15px;
+}
+
+.link {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.link:hover {
+    color: purple;
+}
+
+.body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+.msg {
+    width: 25px;
+}
+
+.unmatched {
+    color: darkgreen;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    padding: 20px
+}
